@@ -1,0 +1,29 @@
+﻿<Page
+    x:Class="AITESTING.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:AITESTING"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Loaded="Page_Loaded"
+    Width="800" 
+    Height="480" Background="#FF82CAE2">
+
+    <Grid HorizontalAlignment="Center" Width="600">
+        <Grid Background="#FF58D4A4" VerticalAlignment="Top" Canvas.ZIndex="1">
+            <TextBlock FontSize="26" Text="AI Chat Buddy" HorizontalAlignment="Center" VerticalAlignment="Center" Height="40" Canvas.ZIndex="5"/>
+        </Grid>
+        <ScrollViewer x:Name="ChatS" Background="#FF4A4A4A" Margin="0,40,0,60">
+            <StackPanel x:Name="ChatSP" Margin="10"/>
+        </ScrollViewer>
+
+        <StackPanel Orientation="Horizontal" Grid.Row="1" Padding="10" Height="60" HorizontalAlignment="Center" VerticalAlignment="Bottom" Background="#FF58D4A4" Width="600">
+            <TextBlock x:Name="ThinkingTextBlock" Width="500" FontSize="16" Text="AI buddy is thinking..." HorizontalAlignment="Center" VerticalAlignment="Center" Visibility="Collapsed"/>
+            <TextBox x:Name="UserInputTextBox" Width="500" MaxLength="400" PlaceholderText="Enter your message..." FontSize="16"/>
+            <TextBlock Width="15"></TextBlock>
+            <!--Sizebox-->
+            <Button Content="Send" Click="SendButton_Click" Background="#33353535" Padding="10"/>
+        </StackPanel>
+    </Grid>
+</Page>
